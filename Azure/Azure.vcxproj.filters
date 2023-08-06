@@ -27,9 +27,15 @@
     <ClInclude Include="src\Azure\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Azure\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Azure\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Azure\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

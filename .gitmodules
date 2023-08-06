@@ -1,0 +1,3 @@
+[submodule "Azure/vendor/spdlog"]
+	path = Azure/vendor/spdlog
+	url = https://github.com/gabime/spdlog

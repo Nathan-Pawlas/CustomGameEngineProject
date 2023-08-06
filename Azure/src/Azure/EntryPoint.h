@@ -8,7 +8,9 @@ extern Azure::Application* Azure::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	printf("Yo!");
+	Azure::Log::Init();
+	AZ_CORE_WARN("Uh Oh");
+	AZ_INFO("STINGKY!");
 	auto app = Azure::CreateApplication();
 	app->Run();
 	delete app;

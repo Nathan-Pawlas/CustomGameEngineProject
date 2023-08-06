@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "Azure/Application.h"
 //-------------- LOGGING ------------------
-//#include "Azure/Log.h"
+#include "Azure/Log.h"
 // ----------- ENTRY POINT ----------------
 #include "Azure/EntryPoint.h"
 
