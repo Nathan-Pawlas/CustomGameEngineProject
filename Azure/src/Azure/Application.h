@@ -1,7 +1,8 @@
 #pragma once
-#include "azpch.h"
+#include "Events/Event.h"
 #include "Core.h"
-#include "Azure/Window.h"
+#include "Window.h"
+#include "Azure/Events/ApplicationEvent.h"
 
 namespace Azure {
 	class AZURE_API Application
@@ -11,7 +12,11 @@ namespace Azure {
 		virtual ~Application();
 
 		void Run();
+
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};
