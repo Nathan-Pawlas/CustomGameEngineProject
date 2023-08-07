@@ -1,3 +1,6 @@
 [submodule "Azure/vendor/spdlog"]
 	path = Azure/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Azure/vendor/GLFW"]
+	path = Azure/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

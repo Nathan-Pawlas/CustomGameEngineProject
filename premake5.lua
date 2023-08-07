@@ -10,6 +10,13 @@ workspace "Azure"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Azure/vendor/GLFW/include"
+
+include "Azure/vendor/GLFW"
+
+
 project "Azure"
 	location "Azure"
 	kind "SharedLib"
@@ -29,7 +36,15 @@ project "Azure"
 	includedirs
 	{
 		"$(SolutionDir)Azure/src",
-		"$(SolutionDir)Azure/vendor/spdlog/include"
+		"$(SolutionDir)Azure/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"

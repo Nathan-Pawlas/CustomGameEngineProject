@@ -1,60 +1,63 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Azure">
+      <UniqueIdentifier>{EC1FDC0C-5834-04BE-21B6-A71D8D8900EF}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Azure\Events">
+      <UniqueIdentifier>{502A490E-3C8D-D8B2-E512-1169D154A435}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Azure\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Azure.h" />
     <ClInclude Include="src\Azure\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Azure</Filter>
     </ClInclude>
-    <ClInclude Include="src\Azure.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Azure\Core.h">
+      <Filter>Azure</Filter>
     </ClInclude>
     <ClInclude Include="src\Azure\EntryPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Azure\Log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Azure\Events\Event.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Azure\Events\MouseEvent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Azure\Events\KeyEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Azure</Filter>
     </ClInclude>
     <ClInclude Include="src\Azure\Events\ApplicationEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Azure\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\azpch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Azure\Events\Event.h">
+      <Filter>Azure\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Azure\Events\KeyEvent.h">
+      <Filter>Azure\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Azure\Events\MouseEvent.h">
+      <Filter>Azure\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Azure\Log.h">
+      <Filter>Azure</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Azure\Window.h">
+      <Filter>Azure</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\azpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Azure\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Azure</Filter>
     </ClCompile>
     <ClCompile Include="src\Azure\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Azure</Filter>
     </ClCompile>
-    <ClCompile Include="src\azpch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\azpch.cpp" />
   </ItemGroup>
 </Project>
