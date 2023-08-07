@@ -42,12 +42,18 @@
     <ClInclude Include="src\Azure\Events\ApplicationEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\azpch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Azure\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Azure\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\azpch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -17,6 +17,9 @@ project "Azure"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "azpch.h"
+	pchsource "Azure/src/azpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -25,8 +28,8 @@ project "Azure"
 
 	includedirs
 	{
-		"%{prj.name}/src",
-		"Azure/vendor/spdlog/include"
+		"$(SolutionDir)Azure/src",
+		"$(SolutionDir)Azure/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
@@ -73,8 +76,8 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Azure/vendor/spdlog/include",
-		"Azure/src"
+		"$(SolutionDir)Azure/vendor/spdlog/include",
+		"$(SolutionDir)Azure/src"
 	}
 
 	links

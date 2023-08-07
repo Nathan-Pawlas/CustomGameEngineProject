@@ -58,6 +58,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>AZ_PLATFORM_WINDOWS;AZ_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)Azure\vendor\spdlog\include;$(SolutionDir)Azure\src;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>azpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,6 +75,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>AZ_PLATFORM_WINDOWS;AZ_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)Azure\vendor\spdlog\include;$(SolutionDir)Azure\src;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>azpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,6 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\azpch.h" />
     <ClInclude Include="src\Azure\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Azure\Events\Event.h" />
     <ClInclude Include="src\Azure\Events\KeyEvent.h" />
@@ -92,6 +97,10 @@
     <ClInclude Include="src\Azure\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\azpch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\Azure\Log.cpp" />
     <ClCompile Include="src\Azure\Application.cpp" />
   </ItemGroup>

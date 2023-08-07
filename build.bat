@@ -6,3 +6,4 @@ devenv "Azure.sln" /build Debug
 echo COPYING DLL TO SANDBOX
 xcopy /s C:\dev\Azure\bin\Debug-x64\Azure\Azure.dll C:\dev\Azure\bin\Debug-x64\Sandbox\
 echo ---------------------- BUILD COMPLETE ---------------------
+pause

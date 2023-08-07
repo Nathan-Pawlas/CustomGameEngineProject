@@ -1,8 +1,6 @@
 #pragma once
-
+#include "azpch.h"
 #include "Azure/Core.h"
-#include <string>
-#include <functional>
 
 namespace Azure
 {
